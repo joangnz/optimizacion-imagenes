@@ -1,4 +1,4 @@
-import LazyImage from "./LazyImage";
+import LazyImage from "../LazyImage";
 const Ejercicio2 = () => {
     const images = [
         "https://via.placeholder.com/600.webp",
