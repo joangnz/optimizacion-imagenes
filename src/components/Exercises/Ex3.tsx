@@ -1,4 +1,4 @@
-import ImageEditor from "./ImageEditor";
+import ImageEditor from "../ImageEditor";
 const Ejercicio3 = () => {
     return (
         <div className="p-6">
