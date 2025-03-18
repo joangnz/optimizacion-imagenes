@@ -1,11 +1,11 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
-import Ex1 from "./components/Ex1";
-import Ex2 from "./components/Ex2";
-import Ex3 from "./components/Ex3";
-import Ex4 from "./components/Ex4";
-import Ex5 from "./components/Ex5";
+import Ex1 from "./components/Exercises/Ex1";
+import Ex2 from "./components/Exercises/Ex2";
+import Ex3 from "./components/Exercises/Ex3";
+import Ex4 from "./components/Exercises/Ex4";
+import Ex5 from "./components/Exercises/Ex5";
 import Footer from "./components/Footer";
 function App() {
   return (
