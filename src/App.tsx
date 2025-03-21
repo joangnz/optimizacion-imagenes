@@ -21,7 +21,6 @@ function App() {
           <Route path="/ex2" element={<Ex2 />} />
           <Route path="/ex3" element={<Ex3 />} />
           <Route path="/ex4" element={<Ex4 />} />
-          <Route path="/ex5" element={<Ex5 />} />
         </Routes>
       </div>
       <div className="bg-white dark:bg-gray-900 min-h-screen text-gray900 dark:text-gray-100">
@@ -31,4 +30,5 @@ function App() {
     </Router>
   );
 }
+
 export default App;
