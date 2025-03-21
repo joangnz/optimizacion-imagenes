@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+
 const EjercicioCard = ({ title, path }: { title: string; path: string }) => {
     return (
         <div className="p-4 border rounded-lg shadow-md bg-gray-100">

@@ -1,5 +1,6 @@
 import EjercicioCard from "./EjercicioCard";
 import MarkdownEditor from "./MarkdownEditor";
+
 const ejercicios = [
     { id: 1, title: "Optimización de Imágenes", path: "/ejercicio1" },
     { id: 2, title: "Lazy Loading", path: "/ejercicio2" },
