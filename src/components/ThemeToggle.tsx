@@ -18,7 +18,7 @@ const ThemeToggle = () => {
             className="p-2 bg-gray-300 dark:bg-gray-800 dark:text-white rounded"
             onClick={() => setDarkMode(!darkMode)}
         >
-            {darkMode ? "☀ Modo Claro" : "🌙🌙 Modo Oscuro"}
+            {darkMode ? "☀ Modo Claro" : "🌙 Modo Oscuro"}
         </button>
     );
 };
