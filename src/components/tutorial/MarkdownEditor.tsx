@@ -17,16 +17,34 @@ const MarkdownEditor = () => {
         doc.save("Tutorial_Notas.pdf");
     };
 
+    const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
+        const file = event.target.files?.[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = () => {
+                setText((prev) => prev + `\n\n![Imagen subida](${reader.result})`);
+            };
+            reader.readAsDataURL(file);
+        }
+    };
+
     return (
-        <div className="mt-4">
-            <textarea className="w-full h-40 border p-2" value={text} onChange={(e) => setText(e.target.value)} />
-            <h3 className="text-lg font-bold mt-4">Vista Previa</h3>
-            <div className="p-4 border bg-gray-100">
+        <div className="mt-4 flex flex-col">
+            <div>
+                <input type="file" onChange={handleImageUpload} className="mb-4" />
+                <textarea className="w-full h-40 border p-2" value={text} onChange={(e) => setText(e.target.value)} />
                 <ReactMarkdown>{text}</ReactMarkdown>
             </div>
-            <button onClick={exportToPDF} className="mt-4 bg-green-500 textwhite px-4 py-2 rounded">
-                Exportar a PDF
-            </button>
+            <div>
+                <textarea className="w-full h-40 border p-2" value={text} onChange={(e) => setText(e.target.value)} />
+                <h3 className="text-lg font-bold mt-4">Vista Previa</h3>
+                <div className="p-4 border bg-gray-100">
+                    <ReactMarkdown>{text}</ReactMarkdown>
+                </div>
+                <button onClick={exportToPDF} className="mt-4 bg-green-500 textwhite px-4 py-2 rounded">
+                    Exportar a PDF
+                </button>
+            </div>
         </div>
     );
 };
